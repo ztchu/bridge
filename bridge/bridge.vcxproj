@@ -29,7 +29,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -69,7 +69,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)bridge/support_ipc;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)bridge/support_ipc;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -115,6 +120,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="support_ipc\args_handler.cpp" />
+    <ClCompile Include="support_ipc\args_parser.cpp" />
+    <ClCompile Include="support_ipc\namedpipe_client.cpp" />
+    <ClCompile Include="support_ipc\namedpipe_server.cpp" />
+    <ClCompile Include="support_ipc\tools.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="support_ipc\args_handler.h" />
+    <ClInclude Include="support_ipc\args_parser.h" />
+    <ClInclude Include="support_ipc\constants.h" />
+    <ClInclude Include="support_ipc\logger.h" />
+    <ClInclude Include="support_ipc\namedpipe_client.h" />
+    <ClInclude Include="support_ipc\namedpipe_server.h" />
+    <ClInclude Include="support_ipc\tools.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

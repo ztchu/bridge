@@ -13,5 +13,51 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\support_ipc">
+      <UniqueIdentifier>{03880623-cad6-43b2-9e62-e58ba9c12a37}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="support_ipc\args_handler.cpp">
+      <Filter>源文件\support_ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="support_ipc\args_parser.cpp">
+      <Filter>源文件\support_ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="support_ipc\namedpipe_client.cpp">
+      <Filter>源文件\support_ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="support_ipc\namedpipe_server.cpp">
+      <Filter>源文件\support_ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="support_ipc\tools.cpp">
+      <Filter>源文件\support_ipc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="support_ipc\args_handler.h">
+      <Filter>源文件\support_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="support_ipc\args_parser.h">
+      <Filter>源文件\support_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="support_ipc\constants.h">
+      <Filter>源文件\support_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="support_ipc\logger.h">
+      <Filter>源文件\support_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="support_ipc\namedpipe_client.h">
+      <Filter>源文件\support_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="support_ipc\namedpipe_server.h">
+      <Filter>源文件\support_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="support_ipc\tools.h">
+      <Filter>源文件\support_ipc</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
